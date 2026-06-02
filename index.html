@@ -4,9 +4,35 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="css/bootstrap.css">
-
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body style="background-color: #55aaaa; padding: 50px;">
+<div class="container text-center">
+    <h1 class="text-white mb-4">我的測試網頁</h1>
+    <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#myModal">
+        召喚 Windows 98 視窗
+    </button>
+</div>
+
+<div class="modal fade win98-modal" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered"> <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">世紀末系統警告</h5>
+            <button type="button" class="btn-close" data-bs-shadow="none" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body">
+            偵測到未知異常！這可能是一個超酷的原創企劃檔案，或是某個神祕組織的機密文件。
+            是否要繼續進行深度調查？
+        </div>
+
+        <div class="modal-footer">
+            <button type="button" class="btn win98-btn" data-bs-dismiss="modal">確定 (O)</button>
+        </div>
+
+    </div>
+    </div>
+</div>
 
 
 <script src="js/bootstrap.js"></script>

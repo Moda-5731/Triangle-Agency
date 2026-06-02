@@ -1,0 +1,80 @@
+/* 1. 視窗本體：復古大底灰色、硬直角、立體凸起邊框 */
+.win98-modal .modal-content {
+    background-color: #dfdfdf !important;
+    border-radius: 0 !important; /* 絕對不要圓角！ */
+    border: 2px solid !important;
+    /* 運用四邊顏色差，做出經典的 3D 凸起外框 */
+    border-color: #fff #0a0a0a #0a0a0a #fff !important;
+    padding: 3px;
+    font-family: "MS Sans Serif", "Arial", sans-serif; /* 復古微軟字體 */
+}
+
+/* 2. 標題列：經典的漸層藍色 */
+.win98-modal .modal-header {
+    background: linear-gradient(90deg, #000080, #1084d0) !important;
+    color: white;
+    border-bottom: none !important;
+    padding: 3px 10px !important;
+    border-radius: 0 !important;
+    align-items: center;
+}
+
+.win98-modal .modal-title {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* 3. 關閉按鈕：灰色小方塊加上黑影 */
+.win98-modal .btn-close {
+    background-color: #dfdfdf !important;
+    background-image: none !important; /* 拔掉 Bootstrap 預設的 X 圖片 */
+    border: 2px solid !important;
+    border-color: #fff #0a0a0a #0a0a0a #fff !important;
+    border-radius: 0 !important;
+    opacity: 1 !important;
+    width: 16px;
+    height: 14px;
+    padding: 0 !important;
+    position: relative;
+}
+/* 用純文字的 X 來代替 */
+.win98-modal .btn-close::after {
+    content: "×";
+    color: #000;
+    font-weight: bold;
+    font-size: 14px;
+    position: absolute;
+    top: -3px;
+    left: 2px;
+}
+/* 按鈕按下去時的「凹陷」視覺效果 */
+.win98-modal .btn-close:active {
+    border-color: #0a0a0a #fff #fff #0a0a0a !important;
+}
+
+/* 4. 視窗內文 */
+.win98-modal .modal-body {
+    padding: 20px !important;
+    font-size: 14px;
+    color: #000;
+}
+
+/* 5. 系統按鈕（OK/取消） */
+.win98-btn {
+    background-color: #dfdfdf !important;
+    color: #000 !important;
+    border: 2px solid !important;
+    border-color: #fff #0a0a0a #0a0a0a #fff !important;
+    border-radius: 0 !important;
+    padding: 4px 20px !important;
+    font-size: 14px;
+    box-shadow: none !important;
+}
+.win98-btn:active {
+    border-color: #0a0a0a #fff #fff #0a0a0a !important; /* 按下去瞬間變凹陷 */
+    padding: 5px 19px 3px 21px !important; /* 文字微微往右下位移，超逼真！ */
+}
+
+body {
+    background-color: #3b968f !important; /* 經典的微軟桌面綠 */
+}
