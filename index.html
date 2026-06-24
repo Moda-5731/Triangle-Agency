@@ -9,33 +9,444 @@
 
 </head>
 <body style="padding: 50px;">
-<div class="container text-center">
-    <h1 class="text-white mb-4">我的測試網頁</h1>
-    <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#myModal">
-        召喚 Windows 98 視窗
-    </button>
+
+<!-- ══════════════ NAVBAR WINDOW ══════════════ -->
+<div class="page-shell">
+
+    <div class="window" style="margin-bottom:12px;">
+        <div class="win-titlebar">
+            <div class="win-title-text">
+                <span class="title-icon">🌐</span>
+                Triangle Agency International Ltd. — Microsoft Internet Explorer 4.0
+            </div>
+            <div class="win-controls">
+                <div class="win-btn">_</div>
+                <div class="win-btn">□</div>
+                <div class="win-btn">✕</div>
+            </div>
+        </div>
+        <div class="win-menubar">
+            <a class="menu-item" href="#hero"><u>首</u>頁</a>
+            <a class="menu-item" href="#services"><u>服</u>務</a>
+            <a class="menu-item" href="#team"><u>團</u>隊</a>
+            <a class="menu-item" href="#cases"><u>案</u>例</a>
+            <a class="menu-item" href="#contact"><u>聯</u>絡</a>
+        </div>
+        <div style="background:#C0C0C0; padding:4px 8px; border-bottom:1px solid #808080; display:flex; align-items:center; gap:6px;">
+            <span style="font-size:11px;">網址：</span>
+            <div class="inset" style="flex:1; padding:2px 6px; font-size:11px; font-family:'Share Tech Mono',monospace; background:#FFF;">
+                http://www.triangle-agency.com/
+            </div>
+            <button class="win98-btn" style="padding:2px 14px; font-size:11px;">前往</button>
+        </div>
+    </div>
+
+    <!-- ══════════════ HERO ══════════════ -->
+    <div class="window" id="hero">
+        <div class="win-titlebar">
+            <div class="win-title-text">
+                <span class="title-icon">▲</span>
+                歡迎蒞臨 Triangle Agency International Ltd.
+            </div>
+            <div class="win-controls">
+                <div class="win-btn">_</div><div class="win-btn">□</div><div class="win-btn">✕</div>
+            </div>
+        </div>
+        <div style="background:#000080; padding:0;">
+            <div class="marquee-bar">
+      <span class="marquee-inner">
+        ★ 最新公告：Q3財報優於預期 ★ 台北辦公室榮獲「最佳職場環境獎」 ★ 2024年招募計畫開放申請 ★ 異常事件#TRG-047已妥善「處理」★ 感謝全體同仁辛勤付出 ★ 請勿進入B3層以下區域 ★
+      </span>
+            </div>
+        </div>
+        <div class="win-body">
+            <div class="hero-content">
+                <div class="hero-logo">
+                    <svg class="triangle-svg" width="90" height="90" viewBox="0 0 90 90">
+                        <polygon points="45,6 84,78 6,78" fill="#FFFF00" stroke="#000" stroke-width="3"/>
+                        <polygon points="45,22 72,68 18,68" fill="#C0C0C0" stroke="#000" stroke-width="2"/>
+                        <circle cx="45" cy="50" r="8" fill="#000080"/>
+                        <circle cx="45" cy="50" r="4" fill="#FFFF00"/>
+                    </svg>
+                    <div style="font-size:9px; color:#444; margin-top:4px; font-family:'Share Tech Mono',monospace;">EST. 1952</div>
+                </div>
+                <div class="hero-text">
+                    <div class="hero-title">TRIANGLE AGENCY</div>
+                    <div class="hero-subtitle">International Ltd.</div>
+                    <hr class="hero-divider">
+                    <div class="hero-tagline">「為複雜問題提供全面解決方案」</div>
+                    <div class="hero-desc">
+                        我們是一家跨國諮詢集團，在全球逾47個國家設有辦事處，提供企業管理、風險評估及「特殊事件協調」服務。我們相信，每一個問題都有解決方案——無論該問題是否在技術上符合正常定義。
+                    </div>
+                    <div style="margin-top:12px; display:flex; gap:8px; flex-wrap:wrap; align-items:center;">
+                        <button class="win98-btn primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">聯絡我們</button>
+                        <button class="win98-btn" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">了解服務</button>
+                        <span class="classified-tag">機密</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="win-statusbar">
+            <div class="status-panel">已連線至 triangle-agency.com</div>
+            <div class="status-panel">安全連線 🔒</div>
+            <div class="status-panel" id="status-anomaly">異常指數：<span style="color:#006600;">正常</span></div>
+        </div>
+    </div>
+
+    <!-- ══════════════ ABOUT NOTICE ══════════════ -->
+    <div class="notice-bar">
+        ⚠ &nbsp;本網站最佳瀏覽解析度：800×600。部分內容需要 Clearance Level 3 以上方可檢視。
+    </div>
+
+    <!-- ══════════════ SERVICES ══════════════ -->
+    <div class="window" id="services">
+        <div class="win-titlebar">
+            <div class="win-title-text"><span class="title-icon">📋</span>服務項目</div>
+            <div class="win-controls">
+                <div class="win-btn">_</div><div class="win-btn">□</div><div class="win-btn">✕</div>
+            </div>
+        </div>
+        <div class="win-menubar">
+            <span class="menu-item">一般服務</span>
+            <span class="menu-item">特殊服務 ▓▓▓</span>
+            <span class="menu-item">機密服務 [權限不足]</span>
+        </div>
+        <div class="win-body">
+            <div class="section-title">📁 我們提供什麼</div>
+            <div style="font-size:12px; color:#444; margin-bottom:14px;">
+                Triangle Agency 的服務橫跨多個產業領域。以下為可公開揭露之服務項目：
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🏢</div>
+                    <div class="service-name">企業管理顧問</div>
+                    <div class="service-desc">協助客戶優化組織架構、提升營運效率，並在必要時「重組」不再符合需求的部門。</div>
+                    <div class="service-clearance">CLEARANCE: PUBLIC</div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔍</div>
+                    <div class="service-name">風險評估與管理</div>
+                    <div class="service-desc">全方位風險識別服務，包含市場風險、法規風險，以及無法在此欄位詳述的其他類型風險。</div>
+                    <div class="service-clearance">CLEARANCE: PUBLIC</div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🌐</div>
+                    <div class="service-name">全球事件協調</div>
+                    <div class="service-desc">提供跨國會議籌辦、危機溝通管理，以及確保「現實認知一致性」的相關服務。</div>
+                    <div class="service-clearance">CLEARANCE: LEVEL-3</div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📡</div>
+                    <div class="service-name">資訊情報分析</div>
+                    <div class="service-desc">運用獨家資料庫與分析技術，為客戶提供深度市場洞察。資料來源不對外揭露。</div>
+                    <div class="service-clearance">CLEARANCE: LEVEL-5</div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🗂</div>
+                    <div class="service-name">身份管理服務</div>
+                    <div class="service-desc">協助個人與企業建立、維護或在必要時「更新」身份資料。全程保密，不留紀錄。</div>
+                    <div class="service-clearance">CLEARANCE: LEVEL-7</div>
+                </div>
+                <div class="service-card" style="border-color:#808080 #FFFFFF #FFFFFF #808080; background:#FFF; opacity:0.7;">
+                    <div class="service-icon">▓</div>
+                    <div class="service-name" style="font-family:'Share Tech Mono',monospace; font-size:11px;">██████████████</div>
+                    <div class="service-desc" style="font-family:'Share Tech Mono',monospace; font-size:10px; background:#000; color:#000; user-select:none;">此服務項目需要 OMEGA 等級存取權限。如您看見此文字，請立即聯絡您的直屬主管。</div>
+                    <div class="service-clearance">CLEARANCE: OMEGA</div>
+                </div>
+            </div>
+        </div>
+        <div class="win-statusbar">
+            <div class="status-panel">6 項服務</div>
+            <div class="status-panel">2 項需授權</div>
+            <div class="status-panel">1 項 [已遮蔽]</div>
+        </div>
+    </div>
+
+    <!-- ══════════════ TEAM ══════════════ -->
+    <div class="window" id="team">
+        <div class="win-titlebar">
+            <div class="win-title-text"><span class="title-icon">👥</span>核心團隊</div>
+            <div class="win-controls">
+                <div class="win-btn">_</div><div class="win-btn">□</div><div class="win-btn">✕</div>
+            </div>
+        </div>
+        <div class="win-body">
+            <div class="section-title">👤 認識我們的團隊</div>
+            <div style="font-size:12px; color:#444; margin-bottom:14px;">
+                我們的專業人員來自各行各業，擁有豐富的「多元背景」。<span class="mono" style="font-size:10px; color:#CC0000;">（部分個人資料依法不予公開）</span>
+            </div>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-avatar">🕶</div>
+                    <div class="team-name">陳█████ 先生</div>
+                    <div class="team-title">執行長 / 創辦人</div>
+                    <div class="team-redacted" title="點擊查看" onclick="this.style.color='#CC0000'">「██年業界經驗，曾任職於██████」</div>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">👩‍💼</div>
+                    <div class="team-name">林小████</div>
+                    <div class="team-title">特殊事務部主任</div>
+                    <div class="team-redacted" onclick="this.style.color='#CC0000'">「專長：異常現象分類、█████</div>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">🧑‍🔬</div>
+                    <div class="team-name">王██ 博士</div>
+                    <div class="team-title">首席研究員</div>
+                    <div class="team-redacted" onclick="this.style.color='#CC0000'">「前████研究機構、諾貝爾█獎」</div>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">🗂</div>
+                    <div class="team-name">████（代號：Δ-7）</div>
+                    <div class="team-title">現場行動協調員</div>
+                    <div class="team-redacted" onclick="this.style.color='#CC0000'">「本欄位資料已依指令清除」</div>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">📊</div>
+                    <div class="team-name">吳經理</div>
+                    <div class="team-title">人力資源部主任</div>
+                    <div class="team-redacted" onclick="this.style.color='#CC0000'">「負責員工「配置」與例行心理評估」</div>
+                </div>
+                <div class="team-card" style="background:#C0C0C0; border-color:#FFFFFF #808080 #808080 #FFFFFF;">
+                    <div class="team-avatar" style="background:#000; border-color:#000; color:#fff;">?</div>
+                    <div class="team-name" style="font-family:'Share Tech Mono',monospace;">██████████</div>
+                    <div class="team-title">職稱：[已遮蔽]</div>
+                    <div style="font-size:10px; color:#808080; margin-top:4px; font-family:'Share Tech Mono',monospace;">此人員不存在。</div>
+                </div>
+            </div>
+
+            <hr class="win-divider" style="margin-top:16px;">
+            <div class="raised-box" style="margin-top:12px;">
+                <div style="font-size:11px; font-weight:bold; margin-bottom:6px;">📊 員工滿意度調查結果 (2024 Q3)</div>
+                <div style="font-size:11px; margin-bottom:4px;">整體滿意度</div>
+                <div class="progress-wrap"><div class="progress-fill" style="width:87%;" id="prog-sat">87%</div></div>
+                <div style="font-size:11px; margin-bottom:4px; margin-top:8px;">「對公司業務性質的理解程度」</div>
+                <div class="progress-wrap"><div class="progress-fill" style="width:12%;" id="prog-know">12%</div></div>
+                <div style="font-size:11px; margin-bottom:4px; margin-top:8px;">願意向他人推薦本公司</div>
+                <div class="progress-wrap"><div class="progress-fill" style="width:94%;" id="prog-rec">94%</div></div>
+                <div style="font-size:10px; color:#808080; margin-top:8px; font-family:'Share Tech Mono',monospace;">※ 調查對象為全體在職員工。失聯員工不計入統計。</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ══════════════ CASES ══════════════ -->
+    <div class="window" id="cases">
+        <div class="win-titlebar">
+            <div class="win-title-text"><span class="title-icon">📂</span>典型案例</div>
+            <div class="win-controls">
+                <div class="win-btn">_</div><div class="win-btn">□</div><div class="win-btn">✕</div>
+            </div>
+        </div>
+        <div class="win-menubar">
+            <span class="menu-item">全部案例</span>
+            <span class="menu-item">已結案</span>
+            <span class="menu-item">進行中</span>
+            <span class="menu-item">█████ [權限不足]</span>
+        </div>
+        <div class="win-body">
+            <div class="section-title">📁 成功案例節選</div>
+            <div style="font-size:12px; color:#444; margin-bottom:14px;">
+                以下為經過適當「編輯」的案例摘要，供一般大眾參考：
+            </div>
+            <div class="case-list">
+                <div class="case-item">
+                    <div class="case-id">TRG-1994-002</div>
+                    <div class="case-body">
+                        <div class="case-title">某跨國企業組織重整專案</div>
+                        <div class="case-meta">地點：██████ | 期間：██個月 | 參與人員：47名特工</div>
+                        <div class="case-desc">客戶委託本機構處理其東亞部門出現的「管理層溝通障礙」問題。經評估後發現，問題根源並非人員素質，而是辦公室B棟地下室的某個房間。問題已於第三週妥善排除，相關人員記憶已校正。</div>
+                        <div class="case-status status-contained">▶ 狀態：已收容 ✓</div>
+                    </div>
+                </div>
+                <div class="case-item">
+                    <div class="case-id">TRG-2001-019</div>
+                    <div class="case-body">
+                        <div class="case-title">城市基礎設施異常監測計畫</div>
+                        <div class="case-meta">地點：台北市 | 期間：持續進行 | 參與人員：[機密]</div>
+                        <div class="case-desc">配合地方政府進行都市發展顧問服務，同時針對該城市███區域所出現的「統計異常」進行長期監測。至今已發現██件不尋常事件，其中██件已成功遏止，██件仍在追蹤中。</div>
+                        <div class="case-status status-ongoing">▶ 狀態：進行中 <span class="blink">●</span></div>
+                    </div>
+                </div>
+                <div class="case-item">
+                    <div class="case-id">TRG-2009-055</div>
+                    <div class="case-body">
+                        <div class="case-title">企業文化健診與員工福祉提升方案</div>
+                        <div class="case-meta">地點：各地辦公室 | 期間：3個月 | 參與人員：行人資部全體</div>
+                        <div class="case-desc">為應對員工反映的「工作與生活平衡」問題，本機構導入全新的心理健康計畫，並重新設計休息室佈局。員工滿意度顯著提升，對「公司業務真實性質」的好奇心也同步下降37%。</div>
+                        <div class="case-status status-contained">▶ 狀態：已結案（高度成功）✓</div>
+                    </div>
+                </div>
+                <div class="case-item">
+                    <div class="case-id">TRG-2018-██</div>
+                    <div class="case-body">
+                        <div class="case-title">████████████████████</div>
+                        <div class="case-meta">地點：[已遮蔽] | 期間：[已遮蔽] | 參與人員：[已遮蔽]</div>
+                        <div class="case-desc" style="font-family:'Share Tech Mono',monospace; font-size:10px; background:#000; color:#000; padding:6px; user-select:none;">此案例摘要需要 OMEGA 等級存取權限。如您以任何方式取得本文件，請立即撥打 02-████-████。祝您一切順利。</div>
+                        <div class="case-status status-unknown">▶ 狀態：[已遮蔽] ？</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="win-statusbar">
+            <div class="status-panel">顯示 4 / ██ 筆記錄</div>
+            <div class="status-panel">篩選條件：公開</div>
+        </div>
+    </div>
+
+    <!-- ══════════════ CONTACT ══════════════ -->
+    <div class="window" id="contact">
+        <div class="win-titlebar">
+            <div class="win-title-text"><span class="title-icon">✉</span>聯絡我們</div>
+            <div class="win-controls">
+                <div class="win-btn">_</div><div class="win-btn">□</div><div class="win-btn">✕</div>
+            </div>
+        </div>
+        <div class="win-body">
+            <div class="section-title">📬 與我們取得聯繫</div>
+            <div style="font-size:12px; color:#444; margin-bottom:14px;">
+                我們歡迎各界洽詢。所有來信均由專人處理——您的資料將被妥善「保存」。
+            </div>
+            <div class="contact-grid">
+                <div>
+                    <div class="contact-field">
+                        <label class="contact-label">您的姓名（必填）</label>
+                        <input class="contact-input" type="text" placeholder="真實姓名即可">
+                    </div>
+                    <div class="contact-field">
+                        <label class="contact-label">電子郵件</label>
+                        <input class="contact-input" type="email" placeholder="您常用的信箱">
+                    </div>
+                    <div class="contact-field">
+                        <label class="contact-label">聯絡性質</label>
+                        <select class="contact-input">
+                            <option>一般業務洽詢</option>
+                            <option>投資合作</option>
+                            <option>媒體採訪（需審核）</option>
+                            <option>我目擊到了一些事情</option>
+                            <option>我想舉報異常現象</option>
+                            <option>其他（請說明）</option>
+                        </select>
+                    </div>
+                    <div class="contact-field">
+                        <label class="contact-label">您的所在城市</label>
+                        <input class="contact-input" type="text" placeholder="（已自動偵測，可更正）">
+                    </div>
+                </div>
+                <div>
+                    <div class="contact-field">
+                        <label class="contact-label">訊息內容</label>
+                        <textarea class="contact-textarea" rows="6" placeholder="請詳述您的需求。若涉及異常事件，請提供時間、地點與目擊描述。"></textarea>
+                    </div>
+                    <div class="contact-field">
+                        <label class="contact-label">您是從何得知本公司？</label>
+                        <select class="contact-input">
+                            <option>網際網路搜尋</option>
+                            <option>前同事介紹</option>
+                            <option>黑市文件</option>
+                            <option>夢境</option>
+                            <option>本公司主動聯繫</option>
+                            <option>不記得了</option>
+                        </select>
+                    </div>
+                    <div style="display:flex; align-items:center; gap:4px; margin-bottom:10px;">
+                        <input type="checkbox" id="consent" style="width:13px; height:13px;">
+                        <label for="consent" style="font-size:11px;">我同意授權 Triangle Agency 使用我的個人資料（包含但不限於記憶、經歷及████）</label>
+                    </div>
+                </div>
+            </div>
+
+            <div style="display:flex; gap:8px; margin-top:8px;">
+                <button class="win98-btn primary" onclick="showAnomalyPopup()">送出申請</button>
+                <button class="win98-btn" onclick="document.querySelectorAll('.contact-input, .contact-textarea').forEach(el=>el.value='')">清除</button>
+            </div>
+
+            <hr class="win-divider" style="margin-top:20px;">
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:12px;">
+                <div class="inset-gray">
+                    <div style="font-weight:bold; font-size:11px; margin-bottom:6px;">📞 聯絡資訊</div>
+                    <div style="font-size:11px; line-height:1.9; font-family:'Share Tech Mono',monospace;">
+                        電話：02-████-████<br>
+                        傳真：02-████-████<br>
+                        緊急熱線：0800-TRG-████<br>
+                        地址：台北市███區███路██號<br>
+                        <span style="font-size:9px; color:#808080;">（本地址每季更新）</span>
+                    </div>
+                </div>
+                <div class="inset-gray">
+                    <div style="font-weight:bold; font-size:11px; margin-bottom:6px;">🕐 服務時間</div>
+                    <div style="font-size:11px; line-height:1.9; font-family:'Share Tech Mono',monospace;">
+                        週一至週五：09:00 – 18:00<br>
+                        週末：視狀況而定<br>
+                        異常事件回應：24/7/365<br>
+                        <span style="color:#CC0000; font-size:10px;">※現實崩潰事件不受上述時間限制</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ══════════════ FOOTER WINDOW ══════════════ -->
+    <div class="window">
+        <div class="win-body" style="padding:8px 16px;">
+            <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; font-size:10px; color:#444;">
+                <div style="display:flex; align-items:center; gap:8px;">
+                    <svg width="20" height="20" viewBox="0 0 60 60"><polygon points="30,4 56,52 4,52" fill="#FFFF00" stroke="#000" stroke-width="3"/><circle cx="30" cy="36" r="6" fill="#000080"/></svg>
+                    <span style="font-family:'Share Tech Mono',monospace;">© 1952–<span id="year"></span> Triangle Agency International Ltd. 版權所有（如適用）</span>
+                </div>
+                <div style="display:flex; gap:12px;">
+                    <span style="cursor:pointer; text-decoration:underline;">隱私政策</span>
+                    <span style="cursor:pointer; text-decoration:underline;">使用條款</span>
+                    <span style="cursor:pointer; text-decoration:underline;">忘記看過本站</span>
+                </div>
+            </div>
+            <div style="margin-top:6px; font-size:10px; color:#808080; font-family:'Share Tech Mono',monospace; text-align:center;">
+                本公司完全合法存在。任何相反陳述均屬不實。本網站在 Netscape Navigator 4.0 上瀏覽效果最佳。
+            </div>
+        </div>
+    </div>
+
+</div><!-- /page-shell -->
+
+<!-- ══════════════ TASKBAR ══════════════ -->
+<div class="footer-bar">
+    <div class="footer-start">
+        <svg width="16" height="16" viewBox="0 0 60 60"><polygon points="30,4 56,52 4,52" fill="#FFFF00" stroke="#000" stroke-width="2"/></svg>
+        開始
+    </div>
+    <div class="footer-task">🌐 Triangle Agency — Microsoft Internet Explorer</div>
+    <div class="footer-clock" id="clock">00:00</div>
 </div>
 
-<div class="modal fade win98-modal" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered"> <div class="modal-content">
-        <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">世紀末系統警告</h5>
-            <button type="button" class="btn-close" data-bs-shadow="none" data-bs-dismiss="modal" aria-label="Close"></button>
+<!-- ══════════════ ANOMALY POPUP ══════════════ -->
+<div id="anomaly-popup">
+    <div class="window" style="margin:0;">
+        <div class="win-titlebar" style="background:linear-gradient(to right, #800000, #CC2200);">
+            <div class="win-title-text">⚠ 系統通知</div>
+            <div class="win-controls">
+                <div class="win-btn" onclick="document.getElementById('anomaly-popup').style.display='none'">✕</div>
+            </div>
         </div>
-
-        <div class="modal-body">
-            偵測到未知異常！這可能是一個超酷的原創企劃檔案，或是某個神祕組織的機密文件。
-            是否要繼續進行深度調查？
+        <div class="win-body">
+            <div style="display:flex; gap:12px; align-items:flex-start;">
+                <div style="font-size:36px; line-height:1; flex-shrink:0;">ℹ</div>
+                <div>
+                    <div style="font-weight:bold; margin-bottom:8px;">申請已收到</div>
+                    <div style="font-size:11px; line-height:1.8; font-family:'Share Tech Mono',monospace;">
+                        感謝您的聯絡。<br>
+                        我們已收到您的申請，<br>
+                        並將於 3–5 個工作日內回覆。<br><br>
+                        <span style="color:#CC0000;">您的 IP 位置已記錄。</span><br>
+                        <span style="color:#CC0000;">您的裝置資訊已記錄。</span><br>
+                        <span style="color:#CC0000;">您的████已記錄。</span><br><br>
+                        案件編號：TRG-<span id="case-num">----</span>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align:center; margin-top:16px;">
+                <button class="win98-btn primary" onclick="document.getElementById('anomaly-popup').style.display='none'">確定</button>
+            </div>
         </div>
-
-        <div class="modal-footer">
-            <button type="button" class="btn win98-btn" data-bs-dismiss="modal">確定 (O)</button>
-        </div>
-
-    </div>
     </div>
 </div>
-
 
 <script src="js/bootstrap.js"></script>
 <script src="js/JavaScript.js"></script>

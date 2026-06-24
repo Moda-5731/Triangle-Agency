@@ -10,21 +10,23 @@
     --win-teal: #008080;
     --win-black: #000000;
     --win-bg: #C0C0C0;
-    --TA-red: #d10017
-    --TA-ink: #10045a
-    --TA-bule: #0047bb
-    --TA-yellow: #f0ab00
-    --TA-gray: #eaebf4
+
+    /*--Triangle Agency--*/
+
+    --TA-red: #d10017;
+    --TA-ink: #10045a;
+    --TA-bule: #0047bb;
+    --TA-yellow: #f0ab00;
+    --TA-gray: #eaebf4;
+
+    /*--邊框--*/
+
     --border-raised: 2px solid;
     --bc-raised: #FFFFFF #808080 #808080 #FFFFFF;
     --bc-inset:  #808080 #FFFFFF #FFFFFF #808080;
 }
 
-/* 用直角 */
-.myModal {
-    border-radius: 0px !important;
-    background-color: #dfdfdf !important;
-}
+
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 html { scroll-behavior: smooth; }
@@ -37,7 +39,7 @@ body {
     line-height: 1.5;
 }
 
-/* ─── SCROLLBAR ─── */
+/* ─── Scroll bar 滾動條/捲軸 ─── */
 ::-webkit-scrollbar { width: 16px; }
 ::-webkit-scrollbar-track { background: #C0C0C0; border-left: 1px solid #808080; }
 ::-webkit-scrollbar-thumb {
@@ -539,7 +541,7 @@ hr.win-divider {
     margin-bottom: 10px;
 }
 
-@media(max-width:600px){
+/*@media(max-width:600px){
     .hero-content { flex-direction: column; text-align: center; }
     .hero-title { font-size: 20px; }
 }
