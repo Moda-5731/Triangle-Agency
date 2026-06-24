@@ -96,7 +96,12 @@ body {
     align-items: center;
     gap: 6px;
 }
-.title-icon { font-size: 14px; }
+.title-icon {
+    height: 14px;
+    width: auto;
+    display: inline-block;
+    vertical-align: middle;
+}
 .win-controls { display: flex; gap: 2px; }
 .win-btn {
     width: 16px; height: 14px;
