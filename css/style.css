@@ -20,6 +20,11 @@
     --bc-inset:  #808080 #FFFFFF #FFFFFF #808080;
 }
 
+/* 用直角 */
+.myModal {
+    border-radius: 0px !important;
+    background-color: #dfdfdf !important;
+}
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 html { scroll-behavior: smooth; }
