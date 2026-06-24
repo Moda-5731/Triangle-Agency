@@ -1,3 +1,7 @@
+/*仔個字體*/
+/*幹這裡東西多到我幾乎都要標註是啥
+我發誓是我打得我有學進腦子李
+除了桌寵*/
 @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
 
 :root {
@@ -34,7 +38,7 @@ html { scroll-behavior: smooth; }/*會滾動滑過去*/
 
 body {
     background: #008080;
-    font-family: 'MS Sans Serif', 'Microsoft Sans Serif', Arial, sans-serif;/*找不到就退回 Arial */
+    font-family: 'MS Sans Serif', 'Microsoft Sans Serif', Arial, sans-serif;    /*找不到就退回 Arial */
     font-size: 13px;
     color: #000;
     line-height: 1.5;
@@ -72,11 +76,12 @@ body {
     padding: 24px 16px 80px;
 }
 
-/* ─── WIN98 WINDOW ─── */
+/* ─── WINDOW ─── */
 .window {
     background: #C0C0C0;
     border: 2px solid;
-    border-color: #FFFFFF #808080 #808080 #FFFFFF;
+    border-color: #FFFFFF #808080 #808080 #FFFFFF;/* 上左亮、右下暗 = 凸起效果 */
+    border-radius: 0;       /* 不要圓角!!*/
     margin-bottom: 20px;
 }
 
