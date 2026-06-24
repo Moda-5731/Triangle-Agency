@@ -27,17 +27,28 @@
 }
 
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
+/* box-sizing: border-box 讓 padding/border 算進寬高，避免排版跑掉 */
+* { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; }/*會滾動滑過去*/
 
 body {
     background: #008080;
-    font-family: 'MS Sans Serif', 'Microsoft Sans Serif', Arial, sans-serif;
+    font-family: 'MS Sans Serif', 'Microsoft Sans Serif', Arial, sans-serif;/*找不到就退回 Arial */
     font-size: 13px;
     color: #000;
     line-height: 1.5;
+
 }
+
+.desktop { position: relative;}
+.desktop::after { /* ::after 製造一層疊在上面 */
+    content: ''; position: absolute; inset: 0; /* 四邊貼滿 */
+    pointer-events: none; /* 不擋點擊 */
+    z-index: 999; /* 疊在最上面 */
+    background: repeating-linear-gradient( 0deg, /* 0度 = 橫線 */
+    transparent, transparent 2px, /* 透明2px（可見內容）*/
+    rgba(0,0,0,0.08) 2px, rgba(0,0,0,0.08) 4px /* 黑色0.08透明度 2px */ ); }
 
 /* ─── Scroll bar 滾動條/捲軸 ─── */
 ::-webkit-scrollbar { width: 16px; }
