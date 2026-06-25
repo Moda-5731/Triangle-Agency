@@ -79,14 +79,26 @@ body{
     color: #000;
     margin-left: -1px;
 }
+.win-btn-sm:hover { background: #b3b3b3; color: #000; }
+.win-btn-sm:active {
+    border-color: #808080 #FFFFFF #FFFFFF #808080; /* 按下時邊框反過來，視覺上像被壓進去 */
+}
+
 .win-btn {
+    padding: 4px 20px;
     background: #C0C0C0;
     border: 2px solid;
     border-color: #FFFFFF #808080 #808080 #FFFFFF;
     border-radius: 0;
     color: #000;
     font-size: 12px;
-    padding: 4px 20px;
+
+}
+
+.win-btn:hover { background: #b3b3b3; color: #000; }
+.win-btn:active {
+    border-color: #808080 #FFFFFF #FFFFFF #808080; /* 按下時邊框反過來，視覺上像被壓進去 */
+    padding: 5px 19px 3px 21px; /* 內容跟著位移1px，加強「壓下去」的錯覺 */
 }
 
     /* 視窗標題列：用漸層藍色模仿 Win98 作用中視窗的標題列 */
@@ -110,8 +122,8 @@ body{
 }
 .win-menubar{
     padding: 2px 4px;
-    border: 1px solid;
-    border-color: var(--bc-inset);
+    border-bottom: 1px solid;
+    border-color: var(--bc-raised);
 }
 
 .win-menubar .nav-link {
@@ -121,6 +133,8 @@ body{
     border-radius: 0;
     gap: 0;
 }
+
+/*NAV*/
 .win-menubar .nav-link:hover,
 .win-menubar .nav-link:focus { background: var(--win-navy); color: #fff; } /* 滑過時整塊反白，像舊版選單 */
 
@@ -132,28 +146,23 @@ body{
     background: #FFFFFF;
     padding: 8px 12px;
 }
-.win-raised {
-    border: 2px solid;
-    border-color: #FFFFFF #808080 #808080 #FFFFFF;
-    background: #C0C0C0;
-    padding: 8px 12px;
-}
 
 /*網址*/
 
 .address-out{
     background:#C0C0C0;
     padding:4px 8px;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    border-color: var(--bc-raised);
     border-bottom:1px solid #808080;
     display:flex;
     align-items:center;
     gap:6px;"
-    border-color: var(--bc-inset);
+
 
 }
 
-/* 等寬打字機字體，用在「機密 / 編號」之類想營造老式終端機感的文字 */
-.mono { font-family: 'Share Tech Mono', 'Courier New', monospace; }
 .address-inset {
     border: 2px solid;
     border-color: #808080 #FFFFFF #FFFFFF #808080;
@@ -162,9 +171,45 @@ body{
     padding:2px 6px; font-size:11px;
 }
 
+/* 等寬打字機字體 */
+.mono { font-family: 'Share Tech Mono', 'Courier New', monospace; }
 
-.btn-win:hover { background: #C0C0C0; color: #000; } /* 蓋掉 Bootstrap 預設 hover 變色 */
-.btn-win:active {
-    border-color: #808080 #FFFFFF #FFFFFF #808080; /* 按下時邊框反過來，視覺上像被壓進去 */
-    padding: 5px 19px 3px 21px; /* 內容跟著位移1px，加強「壓下去」的錯覺 */
+/*會跑喔*/
+.marquee-bar {
+    background: #000080;
+    color: #fff;
+    overflow: hidden;       /* 超出範圍的文字隱藏，才不會把版面撐開 */
+    white-space: nowrap;    /* 強制文字不換行，整串一起橫向移動 */
+    font-size: 11px;
+    padding: 4px 0;
+}
+.marquee-inner {
+    display: inline-block;
+    animation: marquee 28s linear infinite; /* 28秒跑完一輪、線性速度、無限重複 */
+}
+@keyframes marquee {
+    0%   { transform: translateX(100vw); }   /* 起點：在畫面最右側外面 */
+    100% { transform: translateX(-100%); }   /* 終點：完全移出畫面左側 */
+}
+
+/* 捲軸 */
+.win-body {
+    height: 70vh;           /* 限制這個內文區塊的高度（可以依畫面調整，例如 600px） */
+    overflow-y: scroll;     /* 👈 關鍵：強制讓捲軸只出現在這個內文盒子的右邊！ */
+    background: #FFFFFF;    /* 配合你的截圖，內文通常是白底 */
+}
+
+/* 2. 把你的復古滾動條手術刀，精準對準這個 .window-body */
+.win-body{
+    ::-webkit-scrollbar {
+        width: 16px;
+    }
+    ::-webkit-scrollbar-track {
+        background: var(--win-gray);
+    }
+    ::-webkit-scrollbar-thumb {
+        background: var(--win-gray);
+        border: 2px solid;
+        border-color: var(--bc-raised);
+    }
 }
