@@ -23,7 +23,7 @@
     /*--邊框--*/
 
     --border-raised: 2px solid;
-    --bc-raised: #FFFFFF #808080 #808080 #FFFFFF;/* 上左亮、右下暗 = 凸起效果 */
+    --bc-raised: #FFFFFF #808080 #808080 #FFFFFF;/* 凸起效果 */
     --bc-inset:  #808080 #FFFFFF #FFFFFF #808080;
 }
 
@@ -35,6 +35,29 @@ body{
     line-height: 1.5;
 }
 
+/* 捲軸樣式 */
+/*
+這個  ::  是偽元素選擇器（Pseudo-element Selector）
+::-webkit-scrollbar— 整個滾動條。
+::-webkit-scrollbar-button— 捲軸上的按鈕（向上和向下的箭頭，一次捲動一行）。
+::-webkit-scrollbar:horizontal— 水平捲軸。
+
+::-webkit-scrollbar-thumb— 可拖曳的捲動手把。
+::-webkit-scrollbar-track— 捲軸的軌道（進度條），其中白色條上方有一個灰色條。
+
+::-webkit-scrollbar-track-piece— 軌道（進度條）中未被手柄遮擋的部分。
+::-webkit-scrollbar:vertical— 垂直滾動條。
+::-webkit-scrollbar-corner— 滾動條的底部角落，即水平滾動條和垂直滾動條的交匯處。這通常是瀏覽器視窗的右下角。
+::-webkit-resizer— 出現在某些元素底部角落的可拖曳調整大小手把。
+*/
+::-webkit-scrollbar { width: 16px; }
+::-webkit-scrollbar-track { background: var(--win-gray); }            /* 捲軸軌道背景色 */
+::-webkit-scrollbar-thumb {
+    background: var(--win-gray);
+    border: 2px solid;
+    border-color: var(--bc-raised);
+}
+
 .window {
     background: var(--win-gray);
     border: 2px solid;
@@ -44,7 +67,7 @@ body{
 }
 
 /*  _ □ ✕ 小按鈕 */
-.win-btn {
+.win-btn-sm {
     width: 16px; height: 14px;
     background: var(--win-gray);
     border: 1px solid;
@@ -55,6 +78,15 @@ body{
     justify-content: center;
     color: #000;
     margin-left: -1px;
+}
+.win-btn {
+    background: #C0C0C0;
+    border: 2px solid;
+    border-color: #FFFFFF #808080 #808080 #FFFFFF;
+    border-radius: 0;
+    color: #000;
+    font-size: 12px;
+    padding: 4px 20px;
 }
 
     /* 視窗標題列：用漸層藍色模仿 Win98 作用中視窗的標題列 */
@@ -75,4 +107,64 @@ body{
     width: auto;
     display: inline-block;
     vertical-align: middle;
+}
+.win-menubar{
+    padding: 2px 4px;
+    border: 1px solid;
+    border-color: var(--bc-inset);
+}
+
+.win-menubar .nav-link {
+    padding: 2px 8px;
+    font-size: 12px;
+    color: #000;
+    border-radius: 0;
+    gap: 0;
+}
+.win-menubar .nav-link:hover,
+.win-menubar .nav-link:focus { background: var(--win-navy); color: #fff; } /* 滑過時整塊反白，像舊版選單 */
+
+.window .card-body { padding: 12px 16px; }
+
+.win-inset {
+    border: 2px solid;
+    border-color: #808080 #FFFFFF #FFFFFF #808080;
+    background: #FFFFFF;
+    padding: 8px 12px;
+}
+.win-raised {
+    border: 2px solid;
+    border-color: #FFFFFF #808080 #808080 #FFFFFF;
+    background: #C0C0C0;
+    padding: 8px 12px;
+}
+
+/*網址*/
+
+.address-out{
+    background:#C0C0C0;
+    padding:4px 8px;
+    border-bottom:1px solid #808080;
+    display:flex;
+    align-items:center;
+    gap:6px;"
+    border-color: var(--bc-inset);
+
+}
+
+/* 等寬打字機字體，用在「機密 / 編號」之類想營造老式終端機感的文字 */
+.mono { font-family: 'Share Tech Mono', 'Courier New', monospace; }
+.address-inset {
+    border: 2px solid;
+    border-color: #808080 #FFFFFF #FFFFFF #808080;
+    background: #FFFFFF;
+    flex:1;
+    padding:2px 6px; font-size:11px;
+}
+
+
+.btn-win:hover { background: #C0C0C0; color: #000; } /* 蓋掉 Bootstrap 預設 hover 變色 */
+.btn-win:active {
+    border-color: #808080 #FFFFFF #FFFFFF #808080; /* 按下時邊框反過來，視覺上像被壓進去 */
+    padding: 5px 19px 3px 21px; /* 內容跟著位移1px，加強「壓下去」的錯覺 */
 }
