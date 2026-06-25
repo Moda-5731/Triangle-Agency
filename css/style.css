@@ -1,0 +1,58 @@
+/*第一件事還是載個字體*/
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+:root {
+    /*是「根」的意思。表示是選取到根元素的意思*/
+    /*一個是建立變數，一個是套用變數。這邊在在立*/
+    --win-gray: #C0C0C0;
+    --win-dark: #808080;
+    --win-white: #FFFFFF;
+    --win-navy: #000080;
+    --win-teal: #008080;
+    --win-black: #000000;
+    --win-bg: #C0C0C0;
+
+    /*--Triangle Agency--*/
+
+    --TA-red: #d10017;
+    --TA-ink: #10045a;
+    --TA-bule: #0047bb;
+    --TA-yellow: #f0ab00;
+    --TA-gray: #eaebf4;
+
+    /*--邊框--*/
+
+    --border-raised: 2px solid;
+    --bc-raised: #FFFFFF #808080 #808080 #FFFFFF;/* 上左亮、右下暗 = 凸起效果 */
+    --bc-inset:  #808080 #FFFFFF #FFFFFF #808080;
+}
+
+body{
+    background: var(--win-teal);
+    font-family: 'MS Sans Serif', 'Microsoft Sans Serif', Arial, sans-serif;    /*找不到就退回 Arial */
+    font-size: 13px;
+    color: #000;
+    line-height: 1.5;
+}
+
+.window {
+    background: var(--win-gray);
+    border: 2px solid;
+    border-color: var(--bc-raised);
+    border-radius: 0;       /* 不要圓角!!*/
+    margin-bottom: 20px;
+}
+
+    /* 視窗標題列：用漸層藍色模仿 Win98 作用中視窗的標題列 */
+.titlebar {
+    background: linear-gradient(to right, #000080, #1084D0);
+    color: #fff;
+    font-weight: bold;
+    font-size: 12px;
+    padding: 4px 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 0;
+    user-select: none; /* 不能被選取 */
+}
