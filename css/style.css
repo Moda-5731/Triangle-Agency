@@ -35,6 +35,18 @@ body{
     line-height: 1.5;
 }
 
+.scanline { position: relative;}
+.scanline::after { /* ::after 製造一層疊在上面 */
+    content: '';
+    position:  fixed;
+    inset: 0; /* 四邊貼滿 */
+    pointer-events: none; /* 不擋點擊 */
+    z-index: 9999; /* 疊在最上面 */
+    background: repeating-linear-gradient( 0deg, /* 0度 = 橫線 */
+    transparent, transparent 2px, /* 透明2px（可見內容）*/
+    rgba(0,0,0,0.08) 2px, rgba(0,0,0,0.08) 4px /* 黑色0.08透明度 2px */ );
+}
+
 /* 捲軸樣式 */
 /*
 這個  ::  是偽元素選擇器（Pseudo-element Selector）
@@ -60,7 +72,7 @@ body{
 
 .window {
     background: var(--win-gray);
-    border: 2px solid;
+    border: 2.5px solid;
     border-color: var(--bc-raised);
     border-radius: 0;       /* 不要圓角!!*/
     margin-bottom: 20px;
@@ -70,7 +82,7 @@ body{
 .win-btn-sm {
     width: 16px; height: 14px;
     background: var(--win-gray);
-    border: 1px solid;
+    border: 1.5px solid;
     border-color: var(--bc-raised);
     font-size: 9px;
     display: inline-flex;
@@ -81,14 +93,14 @@ body{
 }
 .win-btn-sm:hover { background: #b3b3b3; color: #000; }
 .win-btn-sm:active {
-    border-color: #808080 #FFFFFF #FFFFFF #808080; /* 按下時邊框反過來，視覺上像被壓進去 */
+    border-color: var(--bc-inset); /* 按下時邊框反過來，視覺上像被壓進去 */
 }
 
 .win-btn {
     padding: 4px 20px;
     background: #C0C0C0;
     border: 2px solid;
-    border-color: #FFFFFF #808080 #808080 #FFFFFF;
+    border-color: var(--bc-raised);
     border-radius: 0;
     color: #000;
     font-size: 12px;
@@ -97,11 +109,11 @@ body{
 
 .win-btn:hover { background: #b3b3b3; color: #000; }
 .win-btn:active {
-    border-color: #808080 #FFFFFF #FFFFFF #808080; /* 按下時邊框反過來，視覺上像被壓進去 */
+    border-color: var(--bc-inset); /* 按下時邊框反過來，視覺上像被壓進去 */
     padding: 5px 19px 3px 21px; /* 內容跟著位移1px，加強「壓下去」的錯覺 */
 }
 
-    /* 視窗標題列：用漸層藍色模仿 Win98 作用中視窗的標題列 */
+    /* 視窗標題列*/
 .titlebar {
     background: linear-gradient(to right, #000080, #1084D0);
     color: #fff;
@@ -136,13 +148,13 @@ body{
 
 /*NAV*/
 .win-menubar .nav-link:hover,
-.win-menubar .nav-link:focus { background: var(--win-navy); color: #fff; } /* 滑過時整塊反白，像舊版選單 */
+.win-menubar .nav-link:focus { background: var(--win-navy); color: var(--win-navy); } /* 滑過時整塊反白，像舊版選單 */
 
 .window .card-body { padding: 12px 16px; }
 
 .win-inset {
     border: 2px solid;
-    border-color: #808080 #FFFFFF #FFFFFF #808080;
+    border-color: var(--bc-inset);
     background: #FFFFFF;
     padding: 8px 12px;
 }
@@ -150,12 +162,12 @@ body{
 /*網址*/
 
 .address-out{
-    background:#C0C0C0;
+    background:var(--win-gray);
     padding:4px 8px;
     border-top: 1px solid;
     border-bottom: 1px solid;
     border-color: var(--bc-raised);
-    border-bottom:1px solid #808080;
+    border-bottom:1px solid var(--win-dark);
     display:flex;
     align-items:center;
     gap:6px;"
@@ -165,7 +177,7 @@ body{
 
 .address-inset {
     border: 2px solid;
-    border-color: #808080 #FFFFFF #FFFFFF #808080;
+    border-color: var(--bc-inset);
     background: #FFFFFF;
     flex:1;
     padding:2px 6px; font-size:11px;
@@ -176,31 +188,31 @@ body{
 
 /*會跑喔*/
 .marquee-bar {
-    background: #000080;
+    background: var(--TA-red);
     color: #fff;
     overflow: hidden;       /* 超出範圍的文字隱藏，才不會把版面撐開 */
     white-space: nowrap;    /* 強制文字不換行，整串一起橫向移動 */
     font-size: 11px;
     padding: 4px 0;
+
 }
 .marquee-inner {
     display: inline-block;
-    animation: marquee 28s linear infinite; /* 28秒跑完一輪、線性速度、無限重複 */
+    animation: marquee 23s linear infinite; /* 28秒跑完一輪、線性速度、無限重複 */
 }
 @keyframes marquee {
-    0%   { transform: translateX(100vw); }   /* 起點：在畫面最右側外面 */
+    0%   { transform: translateX(60vw); }   /* 起點：在畫面最右側外面 */
     100% { transform: translateX(-100%); }   /* 終點：完全移出畫面左側 */
 }
 
 /* 捲軸 */
-.win-body {
-    height: 70vh;           /* 限制這個內文區塊的高度（可以依畫面調整，例如 600px） */
-    overflow-y: scroll;     /* 👈 關鍵：強制讓捲軸只出現在這個內文盒子的右邊！ */
-    background: #FFFFFF;    /* 配合你的截圖，內文通常是白底 */
-}
-
-/* 2. 把你的復古滾動條手術刀，精準對準這個 .window-body */
 .win-body{
+    height: 80vh;
+    overflow-y: scroll;     /* 溢出-縱軸 滾動條 */
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    border-color: var(--bc-raised);
+    border-bottom:1px solid var(--win-dark);
     ::-webkit-scrollbar {
         width: 16px;
     }
@@ -212,4 +224,45 @@ body{
         border: 2px solid;
         border-color: var(--bc-raised);
     }
+
+}
+
+/* 工作列*/
+.taskbar {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    height: 28px;
+    background: var(--win-gray);
+    border-top: 2px solid #fff;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 0 4px;
+    font-size: 11px;
+    z-index: 1030; /* 數字要大於 Bootstrap modal 之外的內容，確保工作列永遠在最上層 */
+}
+.taskbar-btn {
+    background: var(--win-gray);
+    border: 2px solid;
+    border-color: var(--bc-raised);
+    padding: 2px 10px;
+    font-weight: bold;
+    display: flex; align-items: center; gap: 4px;
+}
+.taskbar-btn:hover { background: #b3b3b3; color: #000; }
+.taskbar-btn:active {
+    border-color: var(--bc-inset); /* 按下時邊框反過來，視覺上像被壓進去 */
+}
+.task{
+    background: var(--win-gray);
+    border: 2px solid;
+    border-color: var(--bc-inset);
+    padding: 2px 10px;
+    font-size: 11px;
+}
+.clock{
+    margin-left: auto;
+    border: 1px solid var(--win-dark);
+    padding: 2px 10px;
+    font-family: 'Share Tech Mono', monospace;
 }
