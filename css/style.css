@@ -43,6 +43,20 @@ body{
     margin-bottom: 20px;
 }
 
+/*  _ □ ✕ 小按鈕 */
+.win-btn {
+    width: 16px; height: 14px;
+    background: var(--win-gray);
+    border: 1px solid;
+    border-color: var(--bc-raised);
+    font-size: 9px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    margin-left: -1px;
+}
+
     /* 視窗標題列：用漸層藍色模仿 Win98 作用中視窗的標題列 */
 .titlebar {
     background: linear-gradient(to right, #000080, #1084D0);
@@ -55,4 +69,10 @@ body{
     justify-content: space-between;
     border-radius: 0;
     user-select: none; /* 不能被選取 */
+}
+.title-icon {
+    height: 14px;
+    width: auto;
+    display: inline-block;
+    vertical-align: middle;
 }
