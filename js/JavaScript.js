@@ -21,7 +21,7 @@ function setCaseNumber(){
     spawnAnomalyEyes(40);
 }
 
-//眼睛生成核
+//眼睛生成
 function spawnAnomalyEyes(count) {
     // 把舊的眼睛清空
     document.querySelectorAll('.bg-eye').forEach(el => el.remove());
