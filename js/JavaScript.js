@@ -46,7 +46,7 @@ function spawnAnomalyEyes(count) {
             isOverlapping = false;
             attempts++;
 
-            // 1. 隨機抽一組座標與角度
+            // 隨機抽一組座標與角度
             randomLeft = Math.random() * (windowWidth - 120);
             randomTop = Math.random() * (scrollHeight - 70);
             randomBaseAngle = Math.random() * 360;
@@ -54,7 +54,7 @@ function spawnAnomalyEyes(count) {
             const newCenterX = randomLeft + 50;
             const newCenterY = randomTop + 28;
 
-            // 2. 檢查是否與已經長出來的眼睛撞到
+            // 檢查是否與已經長出來的眼睛撞到
             for (let j = 0; j < spawnedEyes.length; j++) {
                 const existingEye = spawnedEyes[j];
                 const dx = newCenterX - existingEye.x;
@@ -115,20 +115,18 @@ document.addEventListener('mousemove', (e) => {
     const mouseY = e.pageY;
 
     spawnedEyes.forEach(eye => {
-        // 1. 計算滑鼠到眼睛中心點的三角函數 Delta 值
+        //計算滑鼠到眼睛中心點的三角函數 Delta 值
         const dx = mouseX - eye.x;
         const dy = mouseY - eye.y;
 
-        // 2. 算出滑鼠與眼睛的絕對夾角弧度
+        //算出滑鼠與眼睛的絕對夾角弧度
         const angle = Math.atan2(dy, dx);
 
-        // 3. 讓瞳孔朝著滑鼠方向移動一小段距離 (最大偏移 12 像素)
         const distance = Math.min(12, Math.sqrt(dx*dx + dy*dy) / 15);
         const pupilX = Math.cos(angle) * distance;
         const pupilY = Math.sin(angle) * distance;
 
-        // 💡 關鍵：因為眼眶本身已經有了隨機的 `eye.baseAngle` 旋轉，
-        // 我們的瞳孔偏移量必須「反向轉回去」，否則瞳孔在眼眶轉動後會往不對的方向飄！
+
         const radians = (eye.baseAngle * Math.PI) / 180;
         const correctedX = pupilX * Math.cos(-radians) - pupilY * Math.sin(-radians);
         const correctedY = pupilX * Math.sin(-radians) + pupilY * Math.cos(-radians);
