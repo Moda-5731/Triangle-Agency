@@ -26,7 +26,7 @@
     --bc-raised: #FFFFFF #808080 #808080 #FFFFFF;/* 凸起效果 */
     --bc-inset:  #808080 #FFFFFF #FFFFFF #808080;
 }
-
+* { box-sizing: border-box; }
 body{
     background: var(--win-teal);
     font-family: 'MS Sans Serif', 'Microsoft Sans Serif', Arial, sans-serif;    /*找不到就退回 Arial */
@@ -252,6 +252,7 @@ body{
     border-bottom: 1px solid;
     border-color: var(--bc-raised);
     border-bottom:1px solid var(--win-dark);
+    scroll-behavior: smooth;
 
     ::-webkit-scrollbar {
         width: 16px;
@@ -322,3 +323,13 @@ body{
 }
 .blink { animation: blink 1.2s step-end infinite; } /* step-end 閃爍 */
 @keyframes blink { 50% { opacity: 0; } }
+
+.img-inset{
+    border: 2.5px solid;
+    border-color: var(--bc-inset);
+}
+.y{font-weight: bold;color: var(--TA-yellow)}
+.r{font-weight: bold;color: var(--TA-red)}
+.ink{font-weight: bold;color: var(--TA-ink)}
+.b{text-decoration: underline 2px var(--TA-bule);}
+.gr{ color:#444;}
