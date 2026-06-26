@@ -13,7 +13,7 @@
 
     <div class="card window" style="margin-bottom:12px;">
         <span class="titlebar">
-            <span class="win-title-text">
+            <span>
                 <img src="img/3.png" alt="icon" class="title-icon">
                 Triangle Agency International Ltd. — Taiwan Branch 3.3
             </span>
@@ -33,10 +33,10 @@
             <a class="nav-link" href="#"><u>說明</u>(H)</a>
         </nav>
 
-        <div class="address-out">
+        <div class="address-out" id="hero">
             <span style="font-size:11px;">網址：</span>
             <div class="address-inset mono">
-                http://www.triangle-agency.com/
+                http://www.triangle-agency.com/TW
             </div>
             <button class="win-btn" style="padding:2px 14px; font-size:11px;">前往</button>
         </div>
@@ -49,7 +49,7 @@
                     ★ 2026年3月3日起培訓生計畫開放申請
                     ★ 異常事件#TRG-047已妥善「處理」
                     ★ 感謝全體同仁辛勤付出
-                    ★ 請勿點擊F12★
+                    ★ 新一季度的團體考核即將開始★
                 </span>
                 </div>
             </div>
@@ -67,7 +67,7 @@
                 </div>
             </div>
 
-            <div class="card-body" style="background:var(--TA-gray);" >
+            <div class="card-body" style="background:var(--TA-gray);">
                 <div class="row align-items-center g-4">
                     <div class="col-12 col-md-auto text-center">
                         <svg width="200" height="200" viewBox="0 0 60 60">
@@ -76,10 +76,15 @@
                         <div class="mono" style=" color:#444;">EST. ████</div>
                     </div>
                     <div class="col">
-                        <div class="hero-title fw-bold" style="font-size:28px; letter-spacing:4px;">TRIANGLE AGENCY</div>
-                        <div class="text-uppercase" style="font-size:11px; color:#444; letter-spacing:2px;">International Ltd. — Taiwan Branch</div>
+                        <div class="hero-title fw-bold" style="font-size:28px; letter-spacing:4px;">TRIANGLE AGENCY
+                        </div>
+                        <div class="text-uppercase" style="font-size:11px; color:#444; letter-spacing:2px;">
+                            International Ltd. — Taiwan Branch
+                        </div>
                         <hr>
-                        <div class="fw-bold" style="color:var(--TA-red);">「Clock in. Save the World.」打卡上班，拯救世界。</div>
+                        <div class="fw-bold" style="color:var(--TA-red);">「Clock in. Save the
+                            World.」打卡上班，拯救世界。
+                        </div>
                         <p class="mt-2" style="font-size:12px; color:#333; max-width:460px;">
                             在「三角機構」，我們不只是一間跨國企業。透過波紋清潔、栩栩如生服裝、摩登馬匹等頂尖子公司，我們將獨家回收的「特殊資產」轉化為日常消費品。
                             <br>
@@ -93,16 +98,132 @@
                     </div>
                 </div>
 
-                <nav class="nav nav-tabs mt-4" id="nav-tab" role="tablist">
+            </div>
 
-                </nav>
+            <nav class="nav nav-tabs nav-pills nav-fill justify-content-center menubar" id="nav-tab"
+                 role="tablist">
+                <a class="nav-link" href="#hero"><u>首頁</u></a>
+                <a class="nav-link" href="#"><u>編輯</u></a>
+                <a class="nav-link" href="#"><u>聯絡我們</u></a>
+            </nav>
 
 
+            <div class="card window" id="contact">
+                <div class="titlebar" style="background:linear-gradient(to right, var(--TA-red), #800000);">
+                    <span>✉ 聯絡我們</span>
+                    <span>
+        <span class="win-btn-sm">_</span>
+        <span class="win-btn-sm">□</span>
+        <span class="win-btn-sm">✕</span>
+      </span>
+                </div>
+                <div class="card-body">
+                    <h2 class="fs-6 fw-bold border-bottom pb-2 mb-3">
+                        <img src="img/EMOJI/mail.png" alt="mail" class="title-icon ">
+                        與我們取得聯繫</h2>
+                    <p style="font-size:12px; color:#444;">
+                        我們歡迎各界洽詢。所有來信均由專人處理——您的資料將被妥善「保存」。</p>
 
 
+                    <form id="contact-form">
+                        <div class="row g-3">
+                            <div class="col-12 col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label fw-bold" style="font-size:11px;">您的姓名（必填）</label>
+                                    <input type="text" class="form-control win-inset " placeholder="真實姓名即可">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label fw-bold" style="font-size:11px;">電子郵件</label>
+                                    <input type="email" class="form-control win-inset" placeholder="您常用的信箱">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label fw-bold" style="font-size:11px;">聯絡性質</label>
+                                    <select class="form-select win-inset">
+                                        <option>一般業務洽詢</option>
+                                        <option>投資合作</option>
+                                        <option>媒體採訪（需審核）</option>
+                                        <option>我目擊到了一些事情</option>
+                                        <option>我想舉報異常現象</option>
+                                        <option>其他（請說明）</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label fw-bold" style="font-size:11px;">您的所在城市</label>
+                                    <input type="text" class="form-control win-inset" placeholder="（已自動偵測，可更正）">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label fw-bold" style="font-size:11px;">訊息內容</label>
+                                    <textarea class="form-control win-inset" rows="6"
+                                              placeholder="請詳述您的需求。若涉及異常事件，請提供時間、地點與目擊描述。"></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label fw-bold"
+                                           style="font-size:11px;">您是從何得知本公司？</label>
+                                    <select class="form-select win-inset">
+                                        <option>網際網路搜尋</option>
+                                        <option>前同事介紹</option>
+                                        <option>黑市文件</option>
+                                        <option>夢境</option>
+                                        <option>本公司主動聯繫</option>
+                                        <option>不記得了</option>
+                                    </select>
+                                </div>
+                                <div class="form-check mb-3">
+                                    <input class="form-check-input" type="checkbox" id="consent">
+                                    <label class="form-check-label" for="consent" style="font-size:11px;">
+                                        我同意授權 Triangle Agency 使用我的個人資料（包含但不限於記憶、經歷及████）
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
 
+                        <div class="d-flex gap-2">
+
+                            <button type="button" class="win-btn fw-bold"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#anomalyModal"
+                                    onclick="setCaseNumber()">送出申請
+                            </button>
+                            <button type="reset" class="win-btn">清除</button>
+                        </div>
+                    </form>
+
+                    <hr class="mt-4">
+                    <div class="row g-3 mt-2">
+                        <div class="col-12 col-md-6">
+                            <div class="win-raised">
+                                <div class="fw-bold mb-2" style="font-size:11px;">
+                                    <img src="img/EMOJI/email.png" alt="email" class="title-icon ">
+                                    聯絡資訊
+                                </div>
+                                <div class="mono" style="font-size:11px; line-height:1.9;">
+                                    電話：02-████-████<br>
+                                    傳真：02-████-████<br>
+                                    緊急熱線：0800-TRG-████<br>
+                                    地址：台北市███區███路██號<br>
+                                    <span style="font-size:9px; color:#808080;">（本地址每季更新）</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="win-raised">
+                                <div class="fw-bold mb-2" style="font-size:11px;">🕐 服務時間</div>
+                                <div class="mono" style="font-size:11px; line-height:1.9;">
+                                    週一至週五：09:00 – 18:00<br>
+                                    週末：視狀況而定<br>
+                                    異常事件回應：24/7/365<br>
+                                    <span style="color:#CC0000; font-size:10px;">※現實崩潰事件不受上述時間限制</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         </div>
+
 
     </div>
 </div>
@@ -120,8 +241,52 @@
         <img src="img/3.png" alt="icon" class="title-icon">
         Triangle Agency — Microsoft Internet Explorer
     </div>
+
+    <div class="statusbar mono">
+        <div class="status-panel">已連線至 triangle-agency.com</div>
+        <div class="status-panel">安全連線
+            <img src="img/TA/lock_-_agency_red.png" alt="lock" class="title-icon ">
+        </div>
+        <div class="status-panel" id="status-anomaly">異常指數：<span style="color:#006600;">正常</span></div>
+    </div>
     <div class="clock mono" id="clock" style="font-size:11px;">00:00</div>
+
 </div>
+
+
+<div class="modal fade" id="anomalyModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content window" style="border-radius:0;">
+            <div class="titlebar" style="background:linear-gradient(to right, #800000, #CC2200);">
+                <span>⚠ 系統通知</span>
+                <button type="button" class="win-btn-sm" data-bs-dismiss="modal">
+                    ✕
+                </button>
+            </div>
+            <div class="card-body">
+                <div class="d-flex gap-3 align-items-start">
+                    <div style="font-size:36px; line-height:1;">ℹ</div>
+                    <div>
+                        <div class="fw-bold mb-2">申請已收到</div>
+                        <div class="mono" style="font-size:11px; line-height:1.8;">
+                            感謝您的聯絡。<br>
+                            我們已收到您的申請，<br>
+                            並將於 3–5 個工作日內回覆。<br><br>
+                            <span style="color:#CC0000;">您的 IP 位置已記錄。</span><br>
+                            <span style="color:#CC0000;">您的裝置資訊已記錄。</span><br>
+                            <span style="color:#CC0000;">您的████已記錄。</span><br><br>
+                            案件編號：TRG-<span id="case-num">----</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-3">
+                    <button type="button" class="btn btn-win98 fw-bold" data-bs-dismiss="modal">確定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/bootstrap.js"></script>
 <script src="js/JavaScript.js"></script>
 </body>
 </html>

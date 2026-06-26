@@ -126,6 +126,18 @@ body{
     border-radius: 0;
     user-select: none; /* 不能被選取 */
 }
+.contact-titlebar {
+    background: linear-gradient(to right, var(--TA-red), #af0d0d);
+    color: #fff;
+    font-weight: bold;
+    font-size: 12px;
+    padding: 4px 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 0;
+    user-select: none; /* 不能被選取 */
+}
 .title-icon {
     height: 14px;
     width: auto;
@@ -148,14 +160,39 @@ body{
 
 /*NAV*/
 .win-menubar .nav-link:hover,
-.win-menubar .nav-link:focus { background: var(--win-navy); color: var(--win-navy); } /* 滑過時整塊反白，像舊版選單 */
+.win-menubar .nav-link:focus { background: var(--win-navy); color: #FFFFFF; } /* 滑過時整塊反白，像舊版選單 */
+
+.menubar{
+    background-color: var(--TA-gray);
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    border-color: var(--TA-red);
+}
+.menubar .nav-link {
+    padding: 2px 8px;
+    font-size: 12px;
+    color: var(--TA-ink);
+    border-radius: 0;
+    gap: 0;
+}
+.menubar .nav-link:hover,
+.menubar .nav-link:focus { background: var(--TA-red); color: #FFFFFF; }
 
 .window .card-body { padding: 12px 16px; }
 
 .win-inset {
     border: 2px solid;
     border-color: var(--bc-inset);
+    border-radius: 0;
     background: #FFFFFF;
+    padding: 4px 12px;
+    font-size: 12px;
+}
+
+.win-raised {
+    border: 2px solid;
+    border-color: var(--bc-raised);
+    background: #C0C0C0;
     padding: 8px 12px;
 }
 
@@ -183,6 +220,8 @@ body{
     padding:2px 6px; font-size:11px;
 }
 
+
+
 /* 等寬打字機字體 */
 .mono { font-family: 'Share Tech Mono', 'Courier New', monospace; }
 
@@ -207,7 +246,7 @@ body{
 
 /* 捲軸 */
 .win-body{
-    height: 80vh;
+    height: 82vh;
     overflow-y: scroll;     /* 溢出-縱軸 滾動條 */
     border-top: 1px solid;
     border-bottom: 1px solid;
@@ -260,8 +299,22 @@ body{
     padding: 2px 10px;
     font-size: 11px;
 }
-.clock{
+.statusbar {
     margin-left: auto;
+    background: #C0C0C0;
+    border-top: 1px solid #808080;
+    padding: 3px 6px;
+    font-size: 11px;
+    display: flex;
+    gap: 4px;
+
+}
+.status-panel {
+    border: 1px solid;
+    border-color: #808080 #FFFFFF #FFFFFF #808080; /* 跟視窗相反，做出「凹陷」的小面板感 */
+    padding: 1px 8px;
+}
+.clock{
     border: 1px solid var(--win-dark);
     padding: 2px 10px;
     font-family: 'Share Tech Mono', monospace;
