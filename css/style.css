@@ -303,8 +303,8 @@ body{
 }
 .statusbar {
     margin-left: auto;
-    background: #C0C0C0;
-    border-top: 1px solid #808080;
+    background: var(--win-gray);
+    border-top: 1px solid var(--win-dark);
     padding: 3px 6px;
     font-size: 11px;
     display: flex;
@@ -333,3 +333,25 @@ body{
 .ink{font-weight: bold;color: var(--TA-ink)}
 .b{text-decoration: underline 2px var(--TA-bule);}
 .gr{ color:#444;}
+
+/*眼睛的容器 */
+.bg-eye {
+    position: absolute;
+    width: 100px;
+    height: 56px;
+    z-index: -1;
+    pointer-events: none; /* 點擊穿透它*/
+    transform-origin: center center;
+}
+
+/* 讓 SVG 填滿容器 */
+.bg-eye svg {
+    width: 100%;
+    height: 100%;
+}
+
+
+.eye-pupil {
+    fill: var(--TA-gray); /
+    transition: transform 0.05s linear; /* 更滑順 */
+}
