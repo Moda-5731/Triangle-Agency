@@ -104,7 +104,7 @@
                  role="tablist">
                 <a class="nav-link" href="#hero"><u>首頁</u></a>
                 <a class="nav-link" href="#"><u>編輯</u></a>
-                <a class="nav-link" href="#"><u>聯絡我們</u></a>
+                <a class="nav-link" href="#contact"><u>聯絡我們</u></a>
             </nav>
 
 
@@ -112,10 +112,10 @@
                 <div class="titlebar" style="background:linear-gradient(to right, var(--TA-red), #800000);">
                     <span>✉ 聯絡我們</span>
                     <span>
-        <span class="win-btn-sm">_</span>
-        <span class="win-btn-sm">□</span>
-        <span class="win-btn-sm">✕</span>
-      </span>
+                        <span class="win-btn-sm">_</span>
+                        <span class="win-btn-sm">□</span>
+                        <span class="win-btn-sm">✕</span>
+                    </span>
                 </div>
                 <div class="card-body">
                     <h2 class="fs-6 fw-bold border-bottom pb-2 mb-3">
@@ -222,7 +222,33 @@
                 </div>
             </div>
 
+
+
+            <div class="card window ">
+                <div class="card-body py-2">
+                    <div class="d-flex justify-content-between align-items-center flex-wrap gap-2"
+                         style="font-size:10px; color:#444;">
+                        <div class="d-flex align-items-center gap-2">
+                            <svg width="13" height="13" viewBox="0 0 60 60">
+                                <polygon points="30,4 56,52 4,52" fill="#d10017"/>
+                            </svg>
+                            <span class="mono">© ████–<span id="year"></span> Triangle Agency International Ltd. 版權所有（如適用）</span>
+                        </div>
+                        <div class="d-flex gap-3">
+                            <span class="text-decoration-underline" role="button">隱私政策</span>
+                            <span class="text-decoration-underline" role="button">使用條款</span>
+                            <span class="text-decoration-underline" role="button">忘記看過本站</span>
+                        </div>
+                    </div>
+                    <div class="mono text-center mt-2" style="font-size:10px; color:#808080;">
+                        本公司完全合法存在。任何相反陳述均屬不實。
+                    </div>
+                </div>
+            </div>
+
+
         </div>
+
 
 
     </div>
@@ -257,7 +283,9 @@
 <div class="modal fade" id="anomalyModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content window" style="border-radius:0;">
-            <div class="titlebar" style="background:linear-gradient(to right, #800000, #CC2200);">
+            <div class="titlebar" id="anomaly-modal-header"
+                 style="background:linear-gradient(to right, #800000, #CC2200);
+                 cursor: move;">
                 <span>⚠ 系統通知</span>
                 <button type="button" class="win-btn-sm" data-bs-dismiss="modal">
                     ✕
@@ -280,7 +308,7 @@
                     </div>
                 </div>
                 <div class="text-center mt-3">
-                    <button type="button" class="btn btn-win98 fw-bold" data-bs-dismiss="modal">確定</button>
+                    <button type="button" class="win-btn fw-bold" data-bs-dismiss="modal">確定</button>
                 </div>
             </div>
         </div>
